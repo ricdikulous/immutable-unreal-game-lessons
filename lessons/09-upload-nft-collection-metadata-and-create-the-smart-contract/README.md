@@ -20,7 +20,7 @@ If you haven't already, you can follow our lesson where we [set up an S3 bucket 
 ## Step-by-Step Guide
 
 ### Prepare the Metadata
-- Clone the `only-metadata` folder from this lesson available [here](../only-metadata).
+- Clone the `only-metadata` folder from this lesson available [here](./only-metadata).
 - Update the values of the `contract.json` file and the `logo.png` in your project's `metadata` folder.
 - Note that the `contract.json` image field will automatically be updated to reference the logo's URL.
 

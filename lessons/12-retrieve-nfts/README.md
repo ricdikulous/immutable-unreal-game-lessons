@@ -70,4 +70,4 @@ By completing this lesson, you'll have set a solid foundation for both minting N
 ## Next Steps
 With these capabilities in place, we are now ready to take the next big step: integrating NFTs directly into our game. Stay tuned for further developments in our NFT integration journey!
 
-[Lesson 1e: Display the Player's NFTs In Game](../13-display-the-nfts-in-game/README.md)
+[Lesson 13: Display the Player's NFTs In Game](../13-display-the-nfts-in-game/README.md)

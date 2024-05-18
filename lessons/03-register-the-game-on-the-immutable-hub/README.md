@@ -58,4 +58,4 @@ In this lesson, we set up a project on Immutable Hub and configured our Unreal E
 ## Next Steps
 In the next lesson, we will log our players in using the Immutable Passport.
 
-[**Log the Player in with the Immutable Passport**](./lessons/04-log-the-player-in-with-the-immutable-passport/README.md)
+[**Log the Player in with the Immutable Passport**](../04-log-the-player-in-with-the-immutable-passport/README.md)

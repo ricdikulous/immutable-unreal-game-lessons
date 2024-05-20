@@ -1,61 +1,52 @@
 # Register the Game on the Immutable Hub
 
+## Lesson Introduction
+In this lesson, we will register our game on the [Immutable Hub](https://hub.immutable.com/). This is a necessary step to utilize the Immutable SDK for player authentication in our Unreal Engine game. By the end of this lesson, you will have set up your project on the Immutable Hub and configured your Unreal Engine game instance with the necessary credentials.
+
 ## Lesson Objective
-Guide students through the process of setting up a project on Immutable Hub and configuring the Unreal Engine game instance.
+By the end of this lesson, you will be able to:
+- Register a game project on the [Immutable Hub](https://hub.immutable.com/).
+- Set up the Immutable Passport with appropriate credentials.
+- Configure the Unreal Engine game instance with the necessary variables for the Immutable SDK.
 
 ## Overview
-In this lesson, you will:
-- Set up a new project in Immutable Hub.
-- Configure client settings in Immutable Hub.
-- Update the game instance in Unreal Engine with the necessary values from Immutable Hub.
+In this lesson, we will:
+1. Navigate to the [Immutable Hub](https://hub.immutable.com/) website and log in.
+2. Create a new project on the Immutable Hub.
+3. Set up the client configuration for the Immutable Passport.
+4. Configure the game instance in Unreal Engine with the obtained credentials.
 
 ## Prerequisites
-Before starting this lesson, make sure you have completed the following:
-- [**Course Introduction**](../01-course-introduction/README.md)
-- [**Install the Immutable SDK into Unreal Engine**](../02-install-the-immutable-sdk-into-unreal-engine/README.md)
+Before starting this lesson, ensure you have completed the previous lesson on [Installing the Immutable SDK into Unreal Engine](../02-install-the-immutable-sdk-into-unreal-engine/README.md). This provides the necessary setup for integrating Immutable's technology into your Unreal Engine project.
 
 ## Step-by-Step Instructions
 
 ### Step 1: Set Up the Project in Immutable Hub
-1. Navigate to the [Immutable Hub website](https://hub.immutable.com/) and log in or create a new account.
-2. Click on **Add Project**.
-3. Name your project **Unreal Run Game**.
-4. Select **Immutable ZKEVM** as the environment.
-5. Create an environment named **test** using the testnet settings. This allows you to test without using real transactions.
+1. **Navigate to the Immutable Hub**: Go to the [Immutable Hub](https://hub.immutable.com/) website and log in. If you don't have an account, create one.
+2. **Create a New Project**: Follow the prompts and fill in the appropriate values for your game. We will set up an environment named "test" use the testnet settings.
 
 ### Step 2: Configure Client in Immutable Hub
-1. Navigate to the **Passport** tab in your project.
-2. Create a default client.
-3. Configure the redirect URL as `rungame://callback` and the logout URL as `rungame://logout`.
-4. Save these changes.
-5. Note down the **Client ID**, **Redirect URI**, and **Logout URI**.
+**Create the Client**:
+   - Navigate to the "Passport" tab and create the default client.
+   - Select the "native" client for our game.
+   - Generally, the default settings are okay if you don't need to support PKCE.
+   - If you need to support PKCE, add the redirect URL: `rungame://callback` and the logout URL: `rungame://logout`.
+   - Save the configuration and note the Client ID for later use.
 
 ### Step 3: Configure Game Instance in Unreal Engine
-1. Open your Unreal Engine project.
-2. Navigate to your custom **Game Instance** blueprint, named `run-game-instance`.
-3. Create variables for:
-    - Client ID
-    - Redirect URI
-    - Logout URI
-    - Environment
-4. Compile the blueprint to add default values:
-    - Set the **Client ID** with the value from Immutable Hub.
-    - Set the **Redirect URI** with `rungame://callback`.
-    - Set the **Logout URI** with `rungame://logout`.
-    - Set the **Environment** to `"sandbox"`.
+We are saving these values in our custom game instance so that we can access them later in our game when we need to authenticate the player and interact with the Immutable Passport.
 
-### Step 4: Code Implementation in the Game Instance
-- **Placeholder for Blueprint Example**
-- Add nodes to initialize the Immutable Passport using the stored Client ID and Redirect URI, adjusting for platform specifics.
-
-## Testing Instructions
-1. Ensure all variables in the Game Instance are set correctly.
-2. Test the game to verify that the Immutable Passport initializes correctly using the provided credentials.
+1. **Open Unreal Engine**: Navigate to your Unreal Engine project.
+2. **Configure the Game Instance**:
+   - Open the `RunGameInstance` blueprint.
+   - Add new variables for the following and set their default values:
+     - **Client ID**: Obtain from the client above.
+     - **Redirect URI**: `rungame://callback` (only if supporting PKCE).
+     - **Logout URI**: `rungame://logout` (only if supporting PKCE).
+     - **Environment**: Set to **sandbox** for testnet.
 
 ## Conclusion
-In this lesson, we set up a project on Immutable Hub and configured our Unreal Engine game instance with the necessary credentials. This setup is crucial for logging players into the game using the Immutable Passport.
+In this lesson, you registered your game on the [Immutable Hub](https://hub.immutable.com/) and configured the game instance in Unreal Engine with the necessary credentials. This setup is crucial for authenticating players using the Immutable Passport.
 
 ## Next Steps
-In the next lesson, we will log our players in using the Immutable Passport.
-
-[**Log the Player in with the Immutable Passport**](../04-log-the-player-in-with-the-immutable-passport/README.md)
+In the next lesson, we will focus on [Logging the Player in with the Immutable Passport](../04-log-the-player-in-with-the-immutable-passport/README.md). This will allow us to authenticate players within our game environment.

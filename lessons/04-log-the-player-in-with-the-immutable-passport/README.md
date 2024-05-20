@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lesson, we will integrate player login functionality using the Immutable Passport within Unreal Engine. This step is crucial as it enables player authentication, a foundational feature for interacting with blockchain elements like NFTs. We will start by initializing the passport, then implement the login process, and finally add silent authentication for a smoother user experience.
+In this lesson, we will integrate player login functionality using the Immutable Passport within Unreal Engine. This step enables player authentication, a foundational feature for interacting with blockchain elements like NFTs. We will start by initializing the passport, then implement the login process, and finally add silent authentication for a smoother user experience.
 
 ## Lesson Objective
 
@@ -10,13 +10,6 @@ By the end of this lesson, you will be able to:
 - Initialize the Immutable Passport in Unreal Engine.
 - Implement player login functionality using the Immutable Passport.
 - Add silent authentication to enhance user experience.
-
-## Overview
-
-This lesson covers the following steps:
-1. Initialize the Immutable Passport.
-2. Implement login logic in the login widget blueprint.
-3. Add logic for silent authentication using cached credentials.
 
 ## Prerequisites
 
@@ -27,6 +20,8 @@ Before starting this lesson, ensure you have completed the previous lesson on [*
 ### 1. Initialize the Immutable Passport
 
 First, we need to initialize the Immutable Passport. Follow these steps:
+
+![Initialize Passport](./initializePassport.png)
 
 1. **Add a New Boolean Variable**:
    - Open your game instance and add a new boolean variable named `isLoggedIn`. This will track whether the player is already logged in.
@@ -48,9 +43,14 @@ First, we need to initialize the Immutable Passport. Follow these steps:
      - If true, initialize the passport with the client ID, redirect URI, logout URI, and environment.
      - If false, initialize the passport with just the client ID and environment.
 
+![Is PKCE Function](./isPKCE.png)
+
+
 ### 2. Implement Login Logic
 
 Next, we need to implement the login logic triggered by the login button:
+
+![Implement Login Logic](./clickLoginBlueprint.png)
 
 1. **Setup Login Button Click Event**:
    - In the login button click event, show the loading spinner and hide the login button.
@@ -66,7 +66,10 @@ Next, we need to implement the login logic triggered by the login button:
 
 To enhance the login experience, add logic to use stored credentials for automatic login:
 
+![Silent Auth](./highlightSilentAuth.png)
+
 1. **Check for Stored Credentials**:
+   - Going back to the `On Construct` Event
    - After initializing the passport, check if the player has stored credentials.
    - If not, allow manual login as previously implemented.
    - If stored credentials are found, attempt to log in automatically using the `Connect IMX` node with "Use cached session" set to true.
@@ -75,7 +78,7 @@ To enhance the login experience, add logic to use stored credentials for automat
    - On successful login, remove the login widget and show the main menu.
    - On failure, fallback to the manual login flow.
 
-## Testing Instructions
+## Expected Behavior
 
 1. **Initialize and Run the Game**:
    - Run the game and observe the passport initialization process. The loading spinner should appear briefly.

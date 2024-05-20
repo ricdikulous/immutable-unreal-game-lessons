@@ -12,27 +12,22 @@ In this video, we'll cover the following steps:
 2. Opening the project and letting it build the modules.
 3. Verifying that the plugin is operational within Unreal Editor.
 
-## Prerequisites
-Before starting this lesson, ensure you have:
-- Git installed on your system.
-- Git Large File Storage (LFS) installed.
-
 ## Detailed Explanation
 
 ### Step 1: Install Git LFS
-Since .uasset and .umap files are stored on Git Large File Storage, you must download and install Git LFS from the [official website](https://git-lfs.com/).
+If you want to use git, since the .uasset and .umap files are stored on Git Large File Storage, you must download and install Git LFS from the [official website](https://git-lfs.com/).
 
 ### Step 2: Clone the Unreal Immutable SDK
 Navigate to the GitHub page for the [Unreal Immutable SDK](https://github.com/immutable/unreal-immutable-sdk.git). From here, you can either download the repository or clone it. 
 
-To clone the repository, Navigate to your project's Plugins directory and clone the repo:
+To clone the repository, make sure you navigate to your project's **Plugins** directory and clone the repo:
 
 ```
 cd MyGame/Plugins
 git clone https://github.com/immutable/unreal-immutable-sdk.git
 ```
 
-If you chose to download the SDK, make sure to unzip it and move it to your project's Plugins directory.
+If you chose to download the SDK, make sure to unzip it and move it to your project's **Plugins** directory.
 
 ### Step 3: Open the Project
 Open the project in the Unreal Editor. If prompted to rebuild the modules, select 'Yes'. This will allow Unreal to integrate the new plugin.
@@ -52,6 +47,6 @@ In summary, we:
 - Confirmed that the plugin is loaded correctly within the Unreal Editor.
 
 ## Next Steps
-In the next lesson, we'll register the game on the Immutable Hub and set up the necessary details to log our players in. See you in the next video!
+In the next lesson, we'll register the game on the Immutable Hub and set up the necessary details to log our players in.
 
 [**Register the Game on the Immutable Hub**](../03-register-the-game-on-the-immutable-hub/README.md)

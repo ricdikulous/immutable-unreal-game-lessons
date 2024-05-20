@@ -1,97 +1,54 @@
 # 06. Player Logout
 
 ## Introduction
-
-Welcome back to our course on integrating NFTs into your Unreal Engine game using Immutable's SDK. In this lesson, we'll focus on implementing a secure logout functionality. Proper logout processes are crucial for games handling sensitive data, such as blockchain wallets and NFTs, to ensure that players can securely and efficiently end their sessions.
+Welcome back to our course on integrating NFTs into your Unreal Engine game using Immutable's SDK. Today, we will focus on implementing the logout functionality. Ensuring players can securely and efficiently end their sessions is crucial, especially when handling sensitive data like blockchain wallets and NFTs.
 
 ## Lesson Objective
-
-By the end of this lesson, you will be able to:
-- Implement logout functionality using Immutable Passport in Unreal Engine.
-- Ensure players can securely log out, safeguarding their account and game data.
+By the end of this lesson, you will be able to implement a secure logout functionality using Immutable Passport in Unreal Engine, ensuring players can securely log out of the game.
 
 ## Overview
-
-In this lesson, we will cover the following steps:
-1. Demonstrate the current state of the game without proper logout functionality.
-2. Implement the logout feature using Unreal Engine blueprints.
-3. Test and demonstrate the successful logout process.
+In this lesson, we will:
+1. Implement the logout functionality using Immutable Passport.
+2. Demonstrate the current state without proper logout.
+3. Update the main menu widget to include logout logic.
+4. Demonstrate a successful logout process.
 
 ## Prerequisites
-
-Before starting this lesson, ensure you have completed the previous lesson on retrieving player data with Immutable Passport. [**Retrieve Player Data with Immutable Passport**](../05-retrieve-player-data-with-immutable-passport/README.md).
+Before starting this lesson, make sure you have completed the previous lesson on [**Retrieve Player Data with Immutable Passport**](../05-retrieve-player-data-with-immutable-passport/README.md). In that lesson, we fetched player wallet information and NFTs, displaying the player details on a "Profile" screen.
 
 ## Step-by-Step Instructions
 
-### Demonstrating the Current State
+### Update the Main Menu Widget
+First, we need to update the main menu widget to add the logout logic, ensuring a seamless user experience when logging out.
 
-Currently, our game automatically logs in with saved credentials and takes the player directly to the main menu. However, clicking the logout button does nothing. We'll address this by implementing proper logout functionality.
+![Logout](./logout.png)
 
-### Implementing Logout Functionality
+1. **Add Logic for Logout Button Clicked Event**:
+   - **Hide Logout Button**: Set the logout button's visibility to hidden to indicate an action is in progress.
+   - **Show Loading Throbber**: Make the loading throbber visible to signal that the logout process is underway.
 
-1. **Open the Main Menu Widget**:
-   - Navigate to the Main Menu Widget in your Unreal Engine project.
-   - Locate the logout button's click event handler.
+2. **Use Immutable Logout Node**:
+   - Add the `Immutable Logout` node to initiate the logout process.
+      - Optionally set whether you want to do a hard logout where the player is navigated to the browser to logout
 
-2. **Update the Logout Button Click Event**:
-   - **Hide the Logout Button**: Set the visibility of the logout button to hidden to indicate that the logout process is starting.
-   - **Show the Loading Throbber**: Set the visibility of a loading throbber to visible to indicate ongoing processing.
+3. **Handle Logout Success**:
+   - **Get Game Instance**: Retrieve the game instance and set the `loggedIn` variable to `false`.
+   - **Create and Show Login Widget**: Create the login widget and add it to the viewport, redirecting players to the login screen.
+   - **Reset UI Elements**: Ensure the visibility of the login button and loading throbber are reset for the next login attempt.
 
-3. **Initiate Logout with Immutable SDK**:
-   - Use the Immutable Logout node to initiate the logout process.
-   - Print "Logging out..." to the debug console to confirm the process has started.
+4. **Handle Logout Failure**:
+   - Reset the visibility of the login button and loading throbber, allowing players to attempt logout again.
 
-4. **Handle Successful Logout**:
-   - Get the game instance and cast it to your specific game instance type.
-   - Set the 'logged-in' variable to false to track the player's logged-out state.
-   - Create and display the login widget, sending players back to the login screen.
-   - Reset the visibility of the logout button and the loading throbber.
 
-5. **Handle Logout Failure**:
-   - Print "Logout failed" to the debug console.
-   - Reset the visibility of the logout button and the loading throbber to allow the player to attempt logout again.
-
-### Blueprint Overview
-
-**Placeholder for Blueprint Example**
-
-- **Logout Button Click Event**:
-  - Set Visibility of Logout Button to Hidden
-  - Set Visibility of Loading Throbber to Visible
-  - Call Immutable Logout Node
-  - Print "Logging out..." to Debug Console
-  - On Success:
-    - Get Game Instance
-    - Set 'Logged-in' Variable to False
-    - Create and Display Login Widget
-    - Reset Visibility of Logout Button and Loading Throbber
-  - On Failure:
-    - Print "Logout failed"
-    - Reset Visibility of Logout Button and Loading Throbber
-
-### Demonstrating the Logout Process
-
-1. Save and compile your blueprint changes.
-2. Run the game and observe the automatic login with saved credentials.
-3. Click the logout button to initiate the process.
-4. Complete the logout process as prompted by the browser.
-5. Observe the return to the login screen, confirming successful logout.
-6. Restart the game to verify that it no longer logs in automatically with saved credentials.
-7. Log in again to ensure the login functionality remains intact.
-
-## Testing Instructions
-
-To test the implementation:
-1. Run the game and log in using saved credentials.
-2. Click the logout button and follow the prompts to complete the logout process.
-3. Verify that you are returned to the login screen.
-4. Restart the game and confirm that it does not log in automatically.
-5. Log in again and check that the main menu is accessible.
+## Expected Behaviour
+1. **Run the Game**: Start the game and verify that you are taken to the main menu with saved credentials.
+2. **Trigger Logout**: Click the logout button and complete the process in the browser.
+3. **Verify Logout**: Ensure the game shows the login screen upon successful logout.
+4. **Re-run the Game**: Restart the game to confirm it no longer auto-logs in with saved credentials.
+5. **Login Again**: Log in again to ensure the login functionality works correctly and returns you to the main menu.
 
 ## Conclusion
-
-In this lesson, we've successfully implemented a secure logout process using the Immutable SDK in our Unreal Engine game. This feature enhances the security and user experience by allowing players to securely end their sessions. 
+In this lesson, we successfully implemented a secure logout process using Immutable Passport in Unreal Engine. This feature enhances the security and user experience by effectively managing session data.
 
 ## Next Steps
-
-In the next lesson, we'll delve into the architecture of minting NFTs, exploring the necessary setup and integration for creating and managing NFTs within our game. Stay tuned! [**Overview of Minting Architecture**](../07-overview-of-minting-architecture/README.md)
+In the next lesson, we will delve into the architecture of minting NFTs. Stay tuned as we continue to enhance our game with exciting blockchain features. [**Overview of Minting Architecture**](../07-overview-of-minting-architecture/README.md).

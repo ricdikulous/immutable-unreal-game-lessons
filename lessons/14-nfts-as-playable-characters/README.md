@@ -25,7 +25,8 @@ Before you begin, ensure you have completed [Lesson 13: Display the NFTs in Game
     - The fox character is the default character and all other character blueprints extend this one.
 
 - **Data Table**: A data table stores the unique values for each character's traits, such as initial speed, top speed, and acceleration. The character name is used to look up the corresponding traits from the data table.
-    - This data table has some data duplication with the metadata on the NFT, this is because for the game this made the implementation more straight forward. However with this design the downside is that if you want to update the metadata you need to do it in the game too
+    - This data table has some data duplication with the metadata on the NFT, this is because for the game this made the implementation more straight forward. However with this design the downside is that if you want to update the metadata you need to do it in the game too.
+    - There is a boolean column to represent default characters these are characters that are playable whether or not the player owns an NFT for these characters.
 
 ![Data Table](./dataTable.png)
 
@@ -36,11 +37,14 @@ Before you begin, ensure you have completed [Lesson 13: Display the NFTs in Game
 ### 3. Load NFTs from Server
 In the "Character Select Container" widget, we will:
 
+1. Add an HTTP request to fetch the player's NFTs from the server and parse the response (done in the same was as the [previous lesson](../13-display-the-nfts-in-game/README.md))
+2. Add a `false` branch to the default character check.
+    - If the character isn't default we need to check all of the player's NFTs to see if they can use this character.
+    - We match the NFT to the character by comparing the name of the NFT with the name of the character on the data table.
+    - If they match, we add the child widget for that character to our array so it will be a selectable element on the left hand side of the screen.
+
 ![Character Select Container](./CharacterContainerOnConstruct.png)
 
-1. Add an HTTP request to fetch the player's NFTs from the server.
-2. Parse the JSON response into our NFT struct.
-3. Modify the "Character Select Container" widget to check if the player owns an NFT for each character. If the player owns the NFT, add the character to the selection screen.
 
 ## Expected Behaviour
 

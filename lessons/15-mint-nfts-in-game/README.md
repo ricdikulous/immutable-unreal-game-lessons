@@ -60,21 +60,21 @@ Now, let's implement the minting functionality in the Mint NFT widget:
    - Create and display the NFT using the Display NFT widget.
    - Hide the loading indicators once the minting process is complete.
 
-![Mint NFT on Click](./displayNFTOnClicked.png)
+![Mint NFT on Click](./mintNFTOnMintClicked.png)
 
 
 ## Expected Behaviour
 
 After implementing the minting functionality, follow these steps to test it:
 
-    Collect at least 10 coins during gameplay to trigger the mint screen.
-    Verify that the mint button now displays the correct IMX address.
-    Click the mint button to mint an NFT.
-    Confirm that the newly minted NFT is displayed on the screen.
-    Check the block explorer link to verify the NFT on the blockchain.
-    Navigate to "My NFTs" to see the new NFT in the inventory.
-    Ensure the new NFT is selectable as a playable character from the start menu.
-*
+* Collect at least 10 coins during gameplay to trigger the mint screen.
+* Verify that the mint button now displays the correct IMX address.
+* Click the mint button to mint an NFT.
+* Confirm that the newly minted NFT is displayed on the screen.
+* Check the block explorer link to verify the NFT on the blockchain.
+* Navigate to "My NFTs" to see the new NFT in the inventory.
+* Ensure the new NFT is selectable as a playable character from the start menu.
+
 ## Conclusion
 
 In this lesson, we have implemented the functionality to mint NFTs directly within the game. We reviewed the existing setup, added the minting logic, and demonstrated the complete minting flow, enabling players to mint new NFTs as rewards for their in-game achievements.

@@ -34,12 +34,14 @@ To make HTTP requests in Unreal Engine, enable the HTTP Blueprint plugin:
 
 We need to modify the NFT Container widget to fetch and display NFTs:
 
-![Widget on construct](./parentOnConstruct.png)
 
 1. **Construct Event**:
     - Grab the game instance.
     - Create an HTTP GET request to retrieve the player's NFTs from the server.
     - Use the endpoint `http://localhost:3000/nfts/<player_IMX_address>`.
+    - For each NFT, create a child widget and add it to the Wrap Box component on the left-hand side of the UI.
+
+![Widget on construct](./parentOnConstruct.png)
 
 2. **Parse Get NFTs Response Function**:
     - Convert the JSON response into an array of NFT structs.
@@ -48,24 +50,20 @@ We need to modify the NFT Container widget to fetch and display NFTs:
 ![Parse get NFTs](./parseGetNFTs.png)
 ![Parse NFTs](./parseNFT.png)
 
-
-3. **Add Child Widgets**:
-    - For each NFT, create a child widget and add it to the Wrap Box component on the left-hand side of the UI.
-
 ### 3. Update the Child NFT Widget
 
 The child widget will display individual NFT details:
-
-![Child Widget on Construct](./childNFTConstruct.png)
 
 1. **Construct Event**:
     - Hide the "Highlight" element initially.
     - Break apart the NFT Details to set the name and image.
     - Download the image using the URL provided and set it in the widget.
 
+![Child Widget on Construct](./childNFTConstruct.png)
+
 ### 4. Implement the On Click Functionality
 
-To display NFT details when an NFT is clicked:
+To display NFT details when an NFT is clicked we want to dispatch an event whenever one of the widgets on the left hand side of the screen is clicked:
 
 1. **Child NFT Widget**:
     - Create an event dispatcher "On NFT Item Clicked" with inputs for NFT Details and Downloaded Image.
@@ -84,22 +82,22 @@ To display NFT details when an NFT is clicked:
 
 To indicate which NFT is selected:
 
-![Child widget highlight](./childNFTUpdateHighlighted.png)
-
 1. **Child NFT Widget**:
     - Implement the "Update Highlighted" function to toggle the highlight based on the selected token ID.
+
+![Child widget highlight](./childNFTUpdateHighlighted.png)
 
 
 ### 6. Add a Link to the Immutable Block Explorer
 
 To provide detailed NFT information we add logic to the button in the UI to open a web browser at the URL for the block explorer of the exact NFT.
 
-![Block explorer link](./parentClickBlockExplorerLink.png)
-
 1. **NFT Container Widget**:
     - Retrieve the NFT contract address from the game instance.
-    - Construct a URL for the Immutable block explorer.
+    - Construct a URL for the Immutable block explorer with the construct address and the token ID.
     - Use a Launch URL node to open the link in a web browser.
+
+![Block explorer link](./parentClickBlockExplorerLink.png)
 
 ## Expected Behaviour
 
@@ -109,6 +107,8 @@ To provide detailed NFT information we add logic to the button in the UI to open
 4. Click on an NFT to see its details on the right-hand side.
 5. Check that the selected NFT is highlighted.
 6. Click the link to the block explorer to view detailed information.
+
+**It's important to make sure your local server is running for this functionality to work. In my experience Unreal engine would sometimes crash if the HTTP request failed**
 
 ## Conclusion
 

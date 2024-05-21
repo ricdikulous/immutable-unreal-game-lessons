@@ -1,8 +1,8 @@
-# immutable-unreal-game-lessons
+# Integrating NFTs into an Unreal Engine Game using Immutable's SDK
 
 ## Course Introduction
 
-Welcome to the "Integrating NFTs into an Unreal Engine Game using Immutable's SDK"! In this comprehensive course, you'll learn how to seamlessly integrate blockchain and NFT functionalities into your Unreal Engine games. The course focuses on an endless runner game where players collect coins and avoid obstacles, and we'll guide you through every step needed to incorporate NFTs into the game. By the end of this course, you'll be able to install and configure Immutable's SDK, authenticate players, mint and display NFTs, and utilize NFTs as playable characters in your game. Whether you're a seasoned developer or new to blockchain technology, this course provides the necessary tools and knowledge to enhance your game with cutting-edge NFT features.
+Welcome to Integrating NFTs into an Unreal Engine Game using Immutable's SDK! In this comprehensive course, you'll learn how to seamlessly integrate NFT functionalities into your Unreal Engine games. The course focuses on an endless runner game where players collect coins and avoid obstacles, and we'll guide you through every step needed to incorporate NFTs into the game. By the end of this course, you'll be able to install and configure Immutable's SDK, authenticate players using the Immutable Passport, mint and display NFTs, and utilize NFTs as playable characters in your game.
 
 
 ## Course Structure

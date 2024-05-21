@@ -10,52 +10,39 @@ By the end of this lesson, you will be able to:
 
 ## Overview
 In this lesson, we will:
-1. Review the current state of character selection in the game.
-2. Understand the architecture for character representation.
-3. Load NFTs from the server.
-4. Update the character selection logic to include NFTs as playable characters.
+1. Understand the architecture for character representation.
+2. Load NFTs from the server.
+3. Update the character selection logic to include NFTs as playable characters.
 
 ## Prerequisites
 Before you begin, ensure you have completed [Lesson 13: Display the NFTs in Game](../13-display-the-nfts-in-game/README.md). In this lesson, we set up the NFT inventory screen to display the NFTs owned by the player.
 
 ## Step-by-Step Instructions
 
-### 1. Review Current State
-Currently, the game shows only default characters in the character selection screen, even if the player owns NFTs. We need to fix this so that the character selection screen reflects the NFTs owned by the player.
-
-### 2. Understand Character Architecture
+### 1. Understand the Character Architecture
 - **Blueprints**: Characters in the game are represented as blueprints. Each blueprint includes the character's animation, skeleton, and properties like turning rate, top speed, acceleration, and the character name.
-- **Data Table**: A data table stores the unique values for each character's traits, such as initial speed, top speed, and acceleration. The character name is used to look up the corresponding traits from the data table.
+    - The custom character data is loaded from a data table and used to set properties properties like turning rate, top speed, acceleration during the on construct event of the character.
+    - The fox character is the default character and all other character blueprints extend this one.
 
-**Example Blueprint and Data Table:**
-![Blueprint and Data Table Example](placeholder_for_blueprint_and_data_table_image)
+- **Data Table**: A data table stores the unique values for each character's traits, such as initial speed, top speed, and acceleration. The character name is used to look up the corresponding traits from the data table.
+    - This data table has some data duplication with the metadata on the NFT, this is because for the game this made the implementation more straight forward. However with this design the downside is that if you want to update the metadata you need to do it in the game too
+
+![Data Table](./dataTable.png)
 
 - **Struct**: The struct represents the structure of our data in the data table.
 
-**Example Struct:**
-![Struct Example](placeholder_for_struct_image)
+![Struct](./struct.png)
 
 ### 3. Load NFTs from Server
 In the "Character Select Container" widget, we will:
+
+![Character Select Container](./CharacterContainerOnConstruct.png)
+
 1. Add an HTTP request to fetch the player's NFTs from the server.
 2. Parse the JSON response into our NFT struct.
+3. Modify the "Character Select Container" widget to check if the player owns an NFT for each character. If the player owns the NFT, add the character to the selection screen.
 
-**Code Placeholder for HTTP Request:**
-```plaintext
-// Code to create and send HTTP request
-// Parse JSON response into NFT struct
-```
-
-4. Update Character Selection Logic
-
-    Modify the "Character Select Container" widget to check if the player owns an NFT for each character.
-    If the player owns the NFT, add the character to the selection screen.
-
-Blueprint Example for Character Selection Logic
-
-// Blueprint logic to iterate through NFTs and add characters to the selection screen
-
-## Testing Instructions
+## Expected Behaviour
 
 After implementing the above changes, run the game and navigate to the character selection screen. Ensure that the screen displays both the default characters and the NFTs owned by the player. When selecting a character, the correct character model should appear, and the character should be playable in the game.
 

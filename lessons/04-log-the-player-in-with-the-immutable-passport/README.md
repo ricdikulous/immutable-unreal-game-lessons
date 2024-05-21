@@ -21,7 +21,6 @@ Before starting this lesson, ensure you have completed the previous lesson on [*
 
 First, we need to initialize the Immutable Passport. Follow these steps:
 
-![Initialize Passport](./initializePassport.png)
 
 1. **Add a New Boolean Variable**:
    - Open your game instance and add a new boolean variable named `isLoggedIn`. This will track whether the player is already logged in.
@@ -37,6 +36,8 @@ First, we need to initialize the Immutable Passport. Follow these steps:
      - If `isLoggedIn` is false, proceed to initialize the Immutable Passport.
    - Show the loading spinner and hide the login button while the passport is initializing.
 
+![Initialize Passport](./initializePassport.png)
+
 4. **Initialize the Passport Based on Device**:
    - Use the custom `isPKCE` function to determine the appropriate login method.
    - Create a branch based on the return value of `isPKCE`:
@@ -50,8 +51,6 @@ First, we need to initialize the Immutable Passport. Follow these steps:
 
 Next, we need to implement the login logic triggered by the login button:
 
-![Implement Login Logic](./clickLoginBlueprint.png)
-
 1. **Setup Login Button Click Event**:
    - In the login button click event, show the loading spinner and hide the login button.
    - Use the `isPKCE` function again to determine the login method.
@@ -62,17 +61,19 @@ Next, we need to implement the login logic triggered by the login button:
      - On success, print a success message and remove the login widget from the parent.
      - On failure, print a failure message and reset the spinner and login button visibility.
 
+![Implement Login Logic](./clickLoginBlueprint.png)
+
 ### 3. Add Silent Authentication
 
 To enhance the login experience, add logic to use stored credentials for automatic login:
-
-![Silent Auth](./highlightSilentAuth.png)
 
 1. **Check for Stored Credentials**:
    - Going back to the `On Construct` Event
    - After initializing the passport, check if the player has stored credentials.
    - If not, allow manual login as previously implemented.
    - If stored credentials are found, attempt to log in automatically using the `Connect IMX` node with "Use cached session" set to true.
+
+![Silent Auth](./highlightSilentAuth.png)
 
 2. **Handle Automatic Login**:
    - On successful login, remove the login widget and show the main menu.

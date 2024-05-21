@@ -21,8 +21,6 @@ Before starting this lesson, make sure you have completed the previous lesson on
 ### Update the Main Menu Widget
 First, we need to update the main menu widget to add the logout logic, ensuring a seamless user experience when logging out.
 
-![Logout](./logout.png)
-
 1. **Add Logic for Logout Button Clicked Event**:
    - **Hide Logout Button**: Set the logout button's visibility to hidden to indicate an action is in progress.
    - **Show Loading Throbber**: Make the loading throbber visible to signal that the logout process is underway.
@@ -39,6 +37,7 @@ First, we need to update the main menu widget to add the logout logic, ensuring 
 4. **Handle Logout Failure**:
    - Reset the visibility of the login button and loading throbber, allowing players to attempt logout again.
 
+![Logout](./logout.png)
 
 ## Expected Behaviour
 1. **Run the Game**: Start the game and verify that you are taken to the main menu with saved credentials.

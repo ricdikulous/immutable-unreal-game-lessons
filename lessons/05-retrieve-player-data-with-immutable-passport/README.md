@@ -30,24 +30,24 @@ Add two new variables:
 ### Enhance the Login Widget to Retrieve Data
 Next, we will enhance the login widget to retrieve the player's email and IMX address during the login process.
 
-![Login Retrieve Data](./loginGetData.png)
-
 1. Extend the successful login flow to integrate the `Is Registered Offchain` node to check if the player is registered.
    - If the player is not registered, use the `Register Off Chain` node to register the player.
 2. Use the `Get Address` and `Get Email` nodes to retrieve the player's IMX address and email.
 3. Store these details in the game instance by casting it to the specific game instance and setting the `playerIMXAddress` and `playerEmail` variables.
 4. Ensure the login process completes smoothly by closing the login widget and transitioning to the main menu.
 
+![Login Retrieve Data](./loginGetData.png)
+
 **Make sure you connect both the manual and automatic login flows to this new logic. It's important to make sure the player is registered to retrieve their data regardless of the method of authentication.**
 
 ### Update the Profile Widget
 Now, we will update the profile widget to display the player's email and IMX address.
 
-![Profile Blueprint](./profileWireUp.png)
-
 1. Open the profile widget blueprint.
 2. On the `Construct` event, retrieve the game instance and cast it to the specific game instance.
 3. Update the text fields in the profile widget to read the `playerIMXAddress` and `playerEmail` from the game instance.
+
+![Profile Blueprint](./profileWireUp.png)
 
 ## Expected Behavior
 After making these changes, we expect to see the player's details on the profile page.

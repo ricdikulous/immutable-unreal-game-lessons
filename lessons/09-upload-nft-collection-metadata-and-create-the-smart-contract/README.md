@@ -163,7 +163,7 @@ Collection Metadata URI: https://${bucketName}.s3.amazonaws.com/contract.json
 - Check the transaction on Immutable Hub and block explorer.
 
 ## What We Accomplished
-Congratulations! We've successfully uploaded our collection's metadata and created a linked smart contract. This setup is vital for our next steps in integrating NFTs into "Trash Dash."
+Congratulations! We've successfully uploaded our collection's metadata and created a linked smart contract. This setup is vital for our next steps in integrating NFTs into our game.
 
 ## Next Steps
 Stay tuned for the next lesson, where we'll dive into the dynamic metadata upload process. We'll learn how to upload metadata for individual NFTs, enabling unique, randomized assets for our game. See you there!

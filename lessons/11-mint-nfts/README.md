@@ -111,7 +111,7 @@ To test it out you can run `npm run dev` and navigate to `http://localhost:3000`
 You can confirm this step was successful by navigating to the [Immutable Hub](https://hub.immutable.com) and clicking on the `Block Explorer` for your NFT collection - you should see a transaction with `Token transfer` in the Type field and `mint` in the Method field.
 
 ## Conclusion
-With this lesson, you'll have a fully functional endpoint capable of dynamically uploading metadata and minting NFTs, marking a significant step in integrating NFT functionality into "Trash Dash".
+With this lesson, you'll have a fully functional endpoint capable of dynamically uploading metadata and minting NFTs, marking a significant step in integrating NFT functionality into our game.
 
 ## Next Steps
 Our next lesson will focus on extending the server to create an endpoint for listing a user's NFTs, further enhancing the NFT experience in the game.

@@ -65,7 +65,7 @@ To test it out you can run `npm run dev` and navigate to `http://localhost:3000`
 - Verify the returned NFTs are as you expect.
 
 ## Conclusion
-By completing this lesson, you'll have set a solid foundation for both minting NFTs and retrieving a player's NFTs. This is a significant milestone in integrating NFTs into the "Trash Dash" game.
+By completing this lesson, you'll have set a solid foundation for both minting NFTs and retrieving a player's NFTs. This is a significant milestone in integrating NFTs into our game game.
 
 ## Next Steps
 With these capabilities in place, we are now ready to take the next big step: integrating NFTs directly into our game. Stay tuned for further developments in our NFT integration journey!

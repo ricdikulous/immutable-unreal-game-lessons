@@ -1,5 +1,5 @@
 # Lesson 10: Dynamic Metadata Upload for Individual Game Assets
-Welcome to Lesson 10, where we focus on the dynamic upload of asset metadata. In our 'Trash Dash' game, players can earn randomized NFT rewards. This tutorial sets up the core dynamic metadata functionality that we will use in later lessons to mint a random NFT.
+Welcome to Lesson 10, where we focus on the dynamic upload of asset metadata. In our game, players can earn randomized NFT rewards. This tutorial sets up the core dynamic metadata functionality that we will use in later lessons to mint a random NFT.
 
 ## Overview
 Here's an overview of what we'll cover in this lesson:
@@ -99,8 +99,6 @@ In this lesson, we've enhanced our NFT functionality by:
 - Reviewing and updating our project's backend structure.
 - Implementing dynamic metadata selection for unique NFT rewards.
 - Demonstrating the functionality through Swagger.
-
-We're now ready to move on to granting the minter role, which will bring us closer to NFT minting in "Trash Dash".
 
 ## Next Steps
 Join us in the next lesson where we'll create and endpoint that mints NFTs.

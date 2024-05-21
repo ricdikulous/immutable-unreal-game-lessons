@@ -25,24 +25,20 @@ First, we need to initialize the Immutable Passport. Follow these steps:
 1. **Add a New Boolean Variable**:
    - Open your game instance and add a new boolean variable named `isLoggedIn`. This will track whether the player is already logged in.
 
-2. **Open the Login Widget Blueprint**:
-   - Find and open the login widget blueprint.
-   - Switch to the event graph tab.
-
-3. **Add Initialization Logic**:
+2. **Add Initialization Logic**:
    - Retrieve the game instance and cast it to your custom `RunGameInstance`.
    - Get the `isLoggedIn` variable and create a branch.
      - If `isLoggedIn` is true, remove the login widget from the parent since the player is already logged in.
      - If `isLoggedIn` is false, proceed to initialize the Immutable Passport.
    - Show the loading spinner and hide the login button while the passport is initializing.
 
-![Initialize Passport](./initializePassport.png)
-
-4. **Initialize the Passport Based on Device**:
+3. **Initialize the Passport Based on Device**:
    - Use the custom `isPKCE` function to determine the appropriate login method.
    - Create a branch based on the return value of `isPKCE`:
      - If true, initialize the passport with the client ID, redirect URI, logout URI, and environment.
      - If false, initialize the passport with just the client ID and environment.
+
+![Initialize Passport](./initializePassport.png)
 
 ![Is PKCE Function](./isPKCE.png)
 

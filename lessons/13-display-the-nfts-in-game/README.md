@@ -45,6 +45,7 @@ We need to modify the NFT Container widget to fetch and display NFTs:
 
 2. **Parse Get NFTs Response Function**:
     - Convert the JSON response into an array of NFT structs.
+    - It's necessary to do some string manipulation to convert the JSON returned from the server into an object rather than an array. Unreal engine struggles to parse the JSON string if it's not an object.
     - Iterate through the array to parse each NFT's attributes and populate the struct.
 
 ![Parse get NFTs](./parseGetNFTs.png)

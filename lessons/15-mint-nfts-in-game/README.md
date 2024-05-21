@@ -52,9 +52,9 @@ Now, let's implement the minting functionality in the Mint NFT widget:
 ![Mint NFT on Construct](./displayNFTOnConstruct.png)
 
 2. **Mint Click Event**:
-   - Construct the JSON body for the minting request by combining strings.
+   - Construct the JSON body for the minting request by strings with the player's IMX adress.
    - Create an HTTP POST request to the mint endpoint (`http://localhost:3000/mint`).
-   - Set the request header to JSON format.
+   - Set the request header to JSON format so the body does not get encoded.
    - Hide the mint button and display loading indicators while processing the request.
    - On success, parse the JSON response to retrieve the NFT details.
    - Create and display the NFT using the Display NFT widget.

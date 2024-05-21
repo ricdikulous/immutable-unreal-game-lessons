@@ -1,4 +1,4 @@
-# 04 - Log the Player in with the Immutable Passport
+# Lesson 4: Log the Player in with the Immutable Passport
 
 ## Introduction
 

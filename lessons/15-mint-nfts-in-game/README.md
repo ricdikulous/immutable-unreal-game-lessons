@@ -1,4 +1,4 @@
-# Mint NFTs In-Game
+# Lesson 15: Mint NFTs In-Game
 
 ## Introduction
 

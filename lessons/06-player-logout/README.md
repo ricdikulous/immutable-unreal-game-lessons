@@ -1,4 +1,4 @@
-# 06. Player Logout
+# Lesson 6: Player Logout
 
 ## Introduction
 Welcome back to our course on integrating NFTs into your Unreal Engine game using Immutable's SDK. Today, we will focus on implementing the logout functionality. Ensuring players can securely and efficiently end their sessions is crucial, especially when handling sensitive data like blockchain wallets and NFTs.

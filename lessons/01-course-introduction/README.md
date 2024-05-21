@@ -1,4 +1,4 @@
-# 01 - Course Introduction
+# Lesson 1: Course Introduction
 
 ## Introduction
 

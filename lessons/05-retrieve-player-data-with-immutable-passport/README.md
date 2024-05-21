@@ -1,4 +1,4 @@
-# Retrieve Player Data with Immutable Passport
+# Lesson 5: Retrieve Player Data with Immutable Passport
 
 ## Introduction
 In this lesson, we will enhance our game by integrating player data retrieval utilizing the Immutable Passport. This functionality is key for personalizing the player experience, allowing us to display important player information such as wallet addresses and email addresses directly within the game.

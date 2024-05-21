@@ -1,4 +1,4 @@
-# Install the Immutable SDK into Unreal Engine
+# Lesson 2: Install the Immutable SDK into Unreal Engine
 
 ## Lesson Introduction
 Welcome to this lesson of our course on integrating the [Immutable SDK for Unreal Engine](https://github.com/immutable/unreal-immutable-sdk.git). Today, we're diving into the installation of the Immutable SDK, the first step in bringing blockchain functionalities into your game.

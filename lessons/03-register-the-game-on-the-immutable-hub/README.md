@@ -1,4 +1,4 @@
-# Register the Game on the Immutable Hub
+# Lesson 3: Register the Game on the Immutable Hub
 
 ## Lesson Introduction
 In this lesson, we will register our game on the [Immutable Hub](https://hub.immutable.com/). This is a necessary step to utilize the Immutable SDK for player authentication in our Unreal Engine game. By the end of this lesson, you will have set up your project on the Immutable Hub and configured your Unreal Engine game instance with the necessary credentials.

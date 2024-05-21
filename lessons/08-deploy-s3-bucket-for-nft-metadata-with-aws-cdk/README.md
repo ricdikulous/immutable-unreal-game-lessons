@@ -1,6 +1,6 @@
 # Lesson 8: Creating an S3 Bucket for NFT Metadata
 
-Welcome to Lesson 6 of our course, where we will focus on creating an Amazon S3 bucket to store the metadata for our NFTs. S3, known for its fast latency and ease of updates, is a robust choice for our needs in "Trash Dash". This lesson will guide you through the process using the AWS Cloud Development Kit (CDK).
+Welcome to Lesson 6 of our course, where we will focus on creating an Amazon S3 bucket to store the metadata for our NFTs. S3, known for its fast latency and ease of updates, is a robust choice for our needs in our game. This lesson will guide you through the process using the AWS Cloud Development Kit (CDK).
 
 ## Overview
 

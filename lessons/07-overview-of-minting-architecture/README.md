@@ -1,4 +1,4 @@
-# 07 - Overview of Minting Architecture
+# Lesson 7: Overview of Minting Architecture
 
 ## Introduction
 
